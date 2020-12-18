@@ -1,0 +1,74 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Express App Swagger Setup",
+        "description": "Swagger Configuration",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "servers": [
+        {
+            "url": "/",
+            "description": "Local System"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Mobiles",
+            "description": "Mobiles API"
+        }
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/mobile": {
+            "get":{
+                "tags": ["Mobiles"]
+            },
+            "post":{
+                "tags": ["Mobiles"]
+            }
+        }
+    },
+    "swaggerschema": {
+        "id": {
+            "properties": {
+                "uuid": {
+                    "type": "string"
+                }
+            }
+        },
+        "Mobile": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                }
+            }
+        },
+        "Mobiles": {
+            "type": "object",
+            "properties": {
+                "mobiles": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/Mobile"
+                    }
+                }
+            }
+        }
+    }
+}
