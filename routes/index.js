@@ -6,16 +6,20 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/user', function(req, res, next) {
+router.get('/users', function(req, res, next) {
   // res.render('index', { title: 'Express' });
   res.send([{
     "id": 1,
     "firstname": "first name",
     "lastname": "last name"
   },{
-    "id": 1,
+    "id": 2,
     "firstname": "first name 2",
     "lastname": "last name 2"
+  },{
+    "id": 3,
+    "firstname": "first name 3",
+    "lastname": "last name 3"
   }]);
 });
 

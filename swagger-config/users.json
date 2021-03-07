@@ -28,7 +28,7 @@
         "application/json"
     ],
     "paths": {
-        "/user": {
+        "/users": {
             "get": {
                 "tags": [
                     "Users"
